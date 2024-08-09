@@ -12,11 +12,11 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
 		integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw=="
 		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+		integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"
 		integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA=="
 		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	<script src="https://code.jquery.com/jquery-3.7.1.min.js"
-		integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 	<script src="/js/main.js"></script>
 	<title>karalef</title>
 </head>
@@ -24,11 +24,9 @@
 <body>
 	<header>
 		<div class="leftPanel">
-			<div class="logo">
-				<a href="/">
-					<img src="/img/logo.png" alt="logo">
-				</a>
-			</div>
+			<a class="logo" href="/">
+				<img src="/img/logo.png" alt="logo">
+			</a>
 			<nav class="navMenu">
 				<a class="navMenuItem active" href="#home"><i class='bx bxs-home'></i> Home</a>
 				<a class="navMenuItem" href="#about"><i class='bx bxs-smile'></i> About Me</a>
@@ -40,9 +38,16 @@
 			</div>
 		</div>
 	</header>
-	<main>
-		<div class="content scroller">
-			<section id="home" class="mainScreen flex fullscreen marg">
+	<main class="content">
+		<section id="home" class="flex fullscreen">
+			<div class="flexEmpty"></div>
+			<nav class="mobileMenu">
+				<a class="navMenuItem active" href="#home"><i class='bx bxs-home'></i> Home</a>
+				<a class="navMenuItem" href="#about"><i class='bx bxs-smile'></i> About Me</a>
+				<a class="navMenuItem" href="#portfolio"><i class='bx bxs-shopping-bag'></i> Portfolio</a>
+				<a class="navMenuItem" href="#contact"><i class='bx bxs-contact'></i> Find Me</a>
+			</nav>
+			<div class="home-container flex">
 				<h2>Dmitry Korolev</h2>
 				<h2 style="color:#fff;">I'm <span class="typing" style="color:#12D640"></span></h2>
 				<script src="js/typed.js/typed.min.js"></script>
@@ -65,9 +70,28 @@
 						<i class='bx bxl-reddit'></i>
 					</a>
 				</div>
-			</section>
-			<section id="about" class="fullscreen flex marg pad50">
-				<div class="about-container flex sb">
+			</div>
+		</section>
+		<section id="about" class="fullscreen flex">
+			<div class="flexEmpty"></div>
+			<div class="about-container flex sb">
+				<div class="aboutText">
+					<h1>About Me</h1>
+					<h4 class="aboutTextT flex wrap">
+						I am an experienced backend developer with over 5 years of experience in the field of
+						IT.<br>
+						My main specialization is developing secure and scalable web applications based on
+						Linux, Go,
+						Docker,
+						MongoDB, and PostgreSQL.<br>
+						I am also deeply interested in cryptography and its application in real-world
+						projects.<br>
+						My goal is to create reliable and high-performance systems that ensure data security and
+						confidentiality
+						for users.<br>
+					</h4>
+				</div>
+				<div class="stackLangs flex wrap">
 					<div class="stackColumn">
 						<img class="stackImg" src="https://go.dev/blog/go-brand/Go-Logo/PNG/Go-Logo_Blue.png">
 						<img class="stackImg"
@@ -86,120 +110,106 @@
 						<img class="stackImg"
 							src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kubernetes_logo_without_workmark.svg/617px-Kubernetes_logo_without_workmark.svg.png">
 					</div>
-					<div class="aboutText">
-						<h1>About Me</h1>
-						<h4 class="aboutTextT flex wrap">
-							I am an experienced backend developer with over 5 years of experience in the field of
-							IT.<br>
-							My main specialization is developing secure and scalable web applications based on
-							Linux, Go,
-							Docker,
-							MongoDB, and PostgreSQL.<br>
-							I am also deeply interested in cryptography and its application in real-world
-							projects.<br>
-							My goal is to create reliable and high-performance systems that ensure data security and
-							confidentiality
-							for users.<br>
-						</h4>
+				</div>
+			</div>
+		</section>
+		<section id="portfolio" class="flex">
+			<div class="flexEmpty"></div>
+			<div class="portfolio-container">
+				<section>
+					<h1 class="portfolio-section-header"><i class='bx bx-world'></i> WEB</h1>
+					<div class="protfolio-section-container row">
+						<a class="protfolio-item" href="https://github.com/karalef/tghwbot">
+							<img src="https://github-readme-stats.vercel.app/api/pin/?username=karalef&repo=tghwbot"
+								alt="reimaginedreadme" />
+						</a>
+						<a class="protfolio-item" href="https://github.com/karalef/shlink">
+							<img src="https://github-readme-stats.vercel.app/api/pin/?username=karalef&repo=shlink"
+								alt="reimaginedreadme" />
+						</a>
+						<a class="protfolio-item" href="https://github.com/karalef/social">
+							<img src="https://github-readme-stats.vercel.app/api/pin/?username=karalef&repo=social"
+								alt="reimaginedreadme" />
+						</a>
+						<a class="protfolio-item" href="https://github.com/karalef/tgot">
+							<img src="https://github-readme-stats.vercel.app/api/pin/?username=karalef&repo=tgot"
+								alt="reimaginedreadme" />
+						</a>
+						<a class="protfolio-item" href="https://github.com/karalef/balaboba">
+							<img src="https://github-readme-stats.vercel.app/api/pin/?username=karalef&repo=balaboba"
+								alt="reimaginedreadme" />
+						</a>
+						<a class="protfolio-item" href="https://github.com/karalef/coincap">
+							<img src="https://github-readme-stats.vercel.app/api/pin/?username=karalef&repo=coincap"
+								alt="reimaginedreadme" />
+						</a>
 					</div>
-				</div>
-			</section>
-			<section id="portfolio" class="marg pad50">
-				<div class="portfolio-container">
-					<section>
-						<h1 class="portfolio-section-header"><i class='bx bx-world'></i> WEB</h1>
-						<div class="protfolio-section-container row">
-							<a class="protfolio-item" href="https://github.com/karalef/tghwbot">
-								<img src="https://github-readme-stats.vercel.app/api/pin/?username=karalef&repo=tghwbot"
-									alt="reimaginedreadme" />
-							</a>
-							<a class="protfolio-item" href="https://github.com/karalef/shlink">
-								<img src="https://github-readme-stats.vercel.app/api/pin/?username=karalef&repo=shlink"
-									alt="reimaginedreadme" />
-							</a>
-							<a class="protfolio-item" href="https://github.com/karalef/social">
-								<img src="https://github-readme-stats.vercel.app/api/pin/?username=karalef&repo=social"
-									alt="reimaginedreadme" />
-							</a>
-							<a class="protfolio-item" href="https://github.com/karalef/tgot">
-								<img src="https://github-readme-stats.vercel.app/api/pin/?username=karalef&repo=tgot"
-									alt="reimaginedreadme" />
-							</a>
-							<a class="protfolio-item" href="https://github.com/karalef/balaboba">
-								<img src="https://github-readme-stats.vercel.app/api/pin/?username=karalef&repo=balaboba"
-									alt="reimaginedreadme" />
-							</a>
-							<a class="protfolio-item" href="https://github.com/karalef/coincap">
-								<img src="https://github-readme-stats.vercel.app/api/pin/?username=karalef&repo=coincap"
-									alt="reimaginedreadme" />
-							</a>
-						</div>
-					</section>
-					<section>
-						<h1 class="portfolio-section-header"><i class='bx bxs-lock-alt'></i> Crypto</h1>
-						<div class="protfolio-section-container row">
-							<a class="protfolio-item" href="https://github.com/karalef/quark">
-								<img src="https://github-readme-stats.vercel.app/api/pin/?username=karalef&repo=quark"
-									alt="reimaginedreadme" />
-							</a>
-							<a class="protfolio-item" href="https://github.com/karalef/circl">
-								<img src="https://github-readme-stats.vercel.app/api/pin/?username=karalef&repo=circl"
-									alt="reimaginedreadme" />
-							</a>
-							<a class="protfolio-item" href="https://github.com/karalef/libcrystals">
-								<img src="https://github-readme-stats.vercel.app/api/pin/?username=karalef&repo=libcrystals"
-									alt="reimaginedreadme" />
-							</a>
-						</div>
-					</section>
-					<section>
-						<h1 class="portfolio-section-header"><i class='bx bx-code-alt'></i> Other</h1>
-						<div class="protfolio-section-container row">
-							<a class="protfolio-item" href="https://github.com/karalef/gobfck">
-								<img src="https://github-readme-stats.vercel.app/api/pin/?username=karalef&repo=gobfck"
-									alt="reimaginedreadme" />
-							</a>
-						</div>
-					</section>
-				</div>
+				</section>
+				<section>
+					<h1 class="portfolio-section-header"><i class='bx bxs-lock-alt'></i> Crypto</h1>
+					<div class="protfolio-section-container row">
+						<a class="protfolio-item" href="https://github.com/karalef/quark">
+							<img src="https://github-readme-stats.vercel.app/api/pin/?username=karalef&repo=quark"
+								alt="reimaginedreadme" />
+						</a>
+						<a class="protfolio-item" href="https://github.com/karalef/circl">
+							<img src="https://github-readme-stats.vercel.app/api/pin/?username=karalef&repo=circl"
+								alt="reimaginedreadme" />
+						</a>
+						<a class="protfolio-item" href="https://github.com/karalef/libcrystals">
+							<img src="https://github-readme-stats.vercel.app/api/pin/?username=karalef&repo=libcrystals"
+								alt="reimaginedreadme" />
+						</a>
+					</div>
+				</section>
+				<section>
+					<h1 class="portfolio-section-header"><i class='bx bx-code-alt'></i> Other</h1>
+					<div class="protfolio-section-container row">
+						<a class="protfolio-item" href="https://github.com/karalef/gobfck">
+							<img src="https://github-readme-stats.vercel.app/api/pin/?username=karalef&repo=gobfck"
+								alt="reimaginedreadme" />
+						</a>
+					</div>
+				</section>
+			</div>
 
-			</section>
-			<section id="contact" class="marg">
-				<hr style="border-color: rgba(13, 13, 13, .4); border-width: 2px;">
-				<div class="contact-container pad50 flex se">
-					<div class="rounded-rectangle email">
-						<h3 class="contactHeader"><i class='bx bxs-envelope'></i> Email</h3>
-						<a href="mailto:mgsiask@gmail.com">
-							<p> mgsiask@gmail.com</p>
-						</a>
-						<a href="mailto:example@mail.com">
-							<p> example@mail.com</p>
-						</a>
-					</div>
-					<div class="rounded-rectangle social">
-						<h3 class="contactHeader"><i class='bx bx-share-alt'></i> Social Media</h3>
-						<a href="https://github.com/karalef">
-							<div class="row">
-								<i class='bx bxl-github'></i>
-								<p> @karalef</p>
-							</div>
-						</a>
-						<a href="https://vk.com/karalef">
-							<div class="row">
-								<i class='bx bxl-vk'></i>
-								<p> @karalef</p>
-							</div>
-						</a>
-					</div>
-					<div class="rounded-rectangle phone">
-						<h3 class="contactHeader"><i class='bx bxs-phone'></i> Phone</h3>
-						<a href="tel:+1 234-567-8910">
-							<p>+1 234-567-8910</p>
-						</a>
-					</div>
+		</section>
+		<section id="contact" class="flex">
+			<div class="flexEmpty"></div>
+			<hr style="border-color: rgba(13, 13, 13, .4); border-width: 2px;">
+			<div class="contact-container pad50 flex wrap se">
+				<div class="rounded-rectangle email">
+					<h3 class="contactHeader"><i class='bx bxs-envelope'></i> Email</h3>
+					<a href="mailto:mgsiask@gmail.com">
+						<p> mgsiask@gmail.com</p>
+					</a>
+					<a href="mailto:example@mail.com">
+						<p> example@mail.com</p>
+					</a>
 				</div>
-			</section>
-		</div>
+				<div class="rounded-rectangle social">
+					<h3 class="contactHeader"><i class='bx bx-share-alt'></i> Social Media</h3>
+					<a href="https://github.com/karalef">
+						<div class="row">
+							<i class='bx bxl-github'></i>
+							<p> @karalef</p>
+						</div>
+					</a>
+					<a href="https://vk.com/karalef">
+						<div class="row">
+							<i class='bx bxl-vk'></i>
+							<p> @karalef</p>
+						</div>
+					</a>
+				</div>
+				<div class="rounded-rectangle phone">
+					<h3 class="contactHeader"><i class='bx bxs-phone'></i> Phone</h3>
+					<a href="tel:+1 234-567-8910">
+						<p>+1 234-567-8910</p>
+					</a>
+				</div>
+			</div>
+		</section>
 	</main>
 </body>
 

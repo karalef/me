@@ -1,19 +1,17 @@
 $(window).on('scroll', function() {
     var sections = $('#home, #about, #portfolio, #contact');
-    var menuItems = $('.navMenu a[href^="#"]');
+    var menuItems = $('a.navMenuItem[href^="#"]');
 
     var currentSection = null;
 
     sections.each(function() {
         var sectionTop = $(this).offset().top;
-        var sectionHeight = $(this).outerHeight();
         var sectionId = $(this).attr('id');
-
-        if ($(window).scrollTop() >= sectionTop - sectionHeight / 2) {
+        if ($(window).scrollTop() >= sectionTop) {
             currentSection = sectionId;
         }
     });
 
     menuItems.removeClass('active');
-    $('.navMenu').find('a[href="#' + currentSection + '"]').addClass('active');
+    menuItems.filter('[href="#' + currentSection + '"]').addClass('active');
 });

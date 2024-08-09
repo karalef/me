@@ -18,7 +18,8 @@ main {
 body {
 	width: 100%;
 	height: 100%;
-	font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (1920 - 320)));
+	/*font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (1920 - 320)));*/
+	font-size: 24px;
 	position: relative;
 	margin: 0;
 	color: #ffffff;
@@ -61,8 +62,9 @@ a:hover {
 	width: 100%;
 }
 
-.marg {
-	margin-left: 16%;
+.flexEmpty {
+	width: 300px;
+	min-width: 300px;
 }
 
 .pad50 {
@@ -74,21 +76,11 @@ a:hover {
 	display: inline-block;
 }
 
-/*
-.scroller {
-	overflow-y: auto;
-	scroll-snap-type: y mandatory;
-	scroll-behavior: smooth;
-}
-.scroller > div {
-	scroll-snap-align: start;
-}
-	*/
 .fullscreen {
 	height: 100vh;
 }
 
-.mainScreen {
+.home-container {
 	padding-left: 20%;
 	align-items: start;
 	justify-content: center;
