@@ -39,7 +39,7 @@
 		</div>
 	</header>
 	<main class="content">
-		<section id="home" class="flex fullscreen">
+		<section id="home" class="flex always-fullscreen">
 			<div class="flexEmpty"></div>
 			<nav class="mobileMenu">
 				<a class="navMenuItem active" href="#home"><i class='bx bxs-home'></i> Home</a>
@@ -48,8 +48,8 @@
 				<a class="navMenuItem" href="#contact"><i class='bx bxs-contact'></i> Find Me</a>
 			</nav>
 			<div class="home-container flex">
-				<h2>Dmitry Korolev</h2>
-				<h2 style="color:#fff;">I'm <span class="typing" style="color:#12D640"></span></h2>
+				<h1>Dmitry Korolev</h1>
+				<h1 style="color:#fff;">I'm <span class="typing" style="color:var(--main-color)"></span></h1>
 				<script src="js/typed.js/typed.min.js"></script>
 				<script type="text/javascript">
 					var typed = new Typed('.typing', {
@@ -72,11 +72,11 @@
 				</div>
 			</div>
 		</section>
-		<section id="about" class="fullscreen flex">
+		<section id="about" class="flex">
 			<div class="flexEmpty"></div>
-			<div class="about-container flex sb">
-				<div class="aboutText">
-					<h1>About Me</h1>
+			<div class="about-container hpad">
+				<div class="aboutText mobile-fs-row">
+					<h2>About Me</h2>
 					<h4 class="aboutTextT flex wrap">
 						I am an experienced backend developer with over 5 years of experience in the field of
 						IT.<br>
@@ -91,123 +91,284 @@
 						for users.<br>
 					</h4>
 				</div>
-				<div class="stackLangs flex wrap">
-					<div class="stackColumn">
-						<img class="stackImg" src="https://go.dev/blog/go-brand/Go-Logo/PNG/Go-Logo_Blue.png">
-						<img class="stackImg"
-							src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Dart-logo.png/600px-Dart-logo.png">
-						<img class="stackImg"
-							src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/306px-ISO_C%2B%2B_Logo.svg.png">
-						<img class="stackImg"
-							src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/935px-Python-logo-notext.svg.png">
+				<div class="h50"></div>
+				<div class="flex se wrap width100">
+					<div class="card skills-card">
+						<div class="card-title">
+							<h4>Frontend Development</h4>
+						</div>
+						<div class="skill-card-desc">
+							<p>Although my expirience is primarly in the Back-End, I am equaly intrigued by the
+								Front-End.</p>
+						</div>
+						<div class="row sb">
+							<div class="skill-subcard">
+								<img
+									src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Dart-logo.png/600px-Dart-logo.png">
+							</div>
+						</div>
+						<div class="skills-str row sb">
+							<p>Languages</p>
+							<div class="chips wrap row">
+								<p class="chip">HTML&CSS</p>
+								<p class="chip">JS</p>
+								<p class="chip">Dart</p>
+							</div>
+						</div>
+						<div class="skills-str row sb">
+							<p>Frameworks</p>
+							<div class="chips wrap row">
+								<p class="chip">Flutter</p>
+							</div>
+						</div>
 					</div>
-					<div class="stackColumn">
-						<img class="stackImg"
-							src="https://wiki.postgresql.org/images/3/30/PostgreSQL_logo.3colors.120x120.png">
-						<img class="stackImg"
-							src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/MongoDB_Logo.svg/512px-MongoDB_Logo.svg.png?20190626143224">
-						<img class="stackImg" src="https://upload.wikimedia.org/wikipedia/commons/7/70/Docker_logo.png">
-						<img class="stackImg"
-							src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kubernetes_logo_without_workmark.svg/617px-Kubernetes_logo_without_workmark.svg.png">
+					<div class="card skills-card">
+						<div class="card-title">
+							<h4>Backend Development</h4>
+						</div>
+						<div class="skill-card-desc">
+							<p>This is where I spend most of my time. I enjoy working with APIs, implementing buisness
+								logic and optimizing data processing.</p>
+						</div>
+						<div class="row sb">
+							<div class="skill-subcard">
+								<img src="https://go.dev/blog/go-brand/Go-Logo/PNG/Go-Logo_Blue.png">
+							</div>
+							<div class="skill-subcard">
+								<img src="https://upload.wikimedia.org/wikipedia/commons/7/70/Docker_logo.png">
+							</div>
+							<div class="skill-subcard">
+								<img
+									src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kubernetes_logo_without_workmark.svg/617px-Kubernetes_logo_without_workmark.svg.png">
+							</div>
+						</div>
+						<div class="skills-str row sb">
+							<p>Frameworks</p>
+							<div class="chips wrap row">
+								<p class="chip">Fiber</p>
+								<p class="chip">Gin</p>
+							</div>
+						</div>
+						<div class="skills-str row sb">
+							<p>Languages</p>
+							<div class="chips wrap row">
+								<p class="chip">Go</p>
+								<p class="chip">Python</p>
+							</div>
+						</div>
+						<div class="skills-str row sb">
+							<p>Databases</p>
+							<div class="chips wrap row">
+								<p class="chip">MongoDB</p>
+								<p class="chip">PostgreSQL</p>
+							</div>
+						</div>
+						<div class="skills-str row sb">
+							<p>Tools</p>
+							<div class="chips wrap row">
+								<p class="chip">Docker</p>
+								<p class="chip">Kubernetes</p>
+							</div>
+						</div>
+					</div>
+					<div class="card skills-card">
+						<div class="card-title">
+							<h4>Other</h4>
+						</div>
+						<div class="skill-card-desc">
+							<p>Some other skills that I am interested in.</p>
+						</div>
+						<div class="skills-str row sb">
+							<p>Interests</p>
+							<div class="chips wrap row">
+								<p class="chip">Cryptography</p>
+								<p class="chip">Computer Science</p>
+							</div>
+						</div>
+						<div class="skills-str row sb">
+							<p>Languages</p>
+							<div class="chips wrap row">
+								<p class="chip">C</p>
+								<p class="chip">C++</p>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</section>
+		<div class="h50"></div>
 		<section id="portfolio" class="flex">
 			<div class="flexEmpty"></div>
-			<div class="portfolio-container">
-				<section>
+			<div class="portfolio-container flex wrap hpad">
+					<h1 style="color: var(--main-color);">&lcub;</h1>
+					<h1>&nbsp;Portfolio&nbsp;</h1>
+					<h1 style="color: var(--main-color);">&rcub;</h1>
+				<section class="width100">
 					<h1 class="portfolio-section-header"><i class='bx bx-world'></i> WEB</h1>
-					<div class="protfolio-section-container row">
-						<a class="protfolio-item" href="https://github.com/karalef/tghwbot">
-							<img src="https://github-readme-stats.vercel.app/api/pin/?username=karalef&repo=tghwbot"
-								alt="reimaginedreadme" />
+					<div class="protfolio-section-container sb row wrap">
+						<a class="card port-card" href="https://github.com/karalef/tghwbot">
+							<div class="card-title">
+								<h4>tghwbot</h4>
+							</div>
+							<div class="card-desc">
+								<p>Telegram version of HwBot</p>
+							</div>
+							<div class="chips wrap row">
+								<p class="chip">Go</p>
+								<p class="chip">PostgreSQL</p>
+								<p class="chip">Docker</p>
+							</div>
 						</a>
-						<a class="protfolio-item" href="https://github.com/karalef/shlink">
-							<img src="https://github-readme-stats.vercel.app/api/pin/?username=karalef&repo=shlink"
-								alt="reimaginedreadme" />
+						<a class="card port-card" href="https://github.com/karalef/shlink">
+							<div class="card-title">
+								<h4>shlink</h4>
+							</div>
+							<div class="card-desc">
+								<p>Link shortener</p>
+							</div>
+							<div class="chips wrap row">
+								<p class="chip">Go</p>
+								<p class="chip">MongoDB</p>
+								<p class="chip">Docker</p>
+							</div>
 						</a>
-						<a class="protfolio-item" href="https://github.com/karalef/social">
-							<img src="https://github-readme-stats.vercel.app/api/pin/?username=karalef&repo=social"
-								alt="reimaginedreadme" />
-						</a>
-						<a class="protfolio-item" href="https://github.com/karalef/tgot">
-							<img src="https://github-readme-stats.vercel.app/api/pin/?username=karalef&repo=tgot"
-								alt="reimaginedreadme" />
-						</a>
-						<a class="protfolio-item" href="https://github.com/karalef/balaboba">
-							<img src="https://github-readme-stats.vercel.app/api/pin/?username=karalef&repo=balaboba"
-								alt="reimaginedreadme" />
-						</a>
-						<a class="protfolio-item" href="https://github.com/karalef/coincap">
-							<img src="https://github-readme-stats.vercel.app/api/pin/?username=karalef&repo=coincap"
-								alt="reimaginedreadme" />
+						<a class="card port-card" href="https://github.com/karalef/tgot">
+							<div class="card-title">
+								<h4>tgot</h4>
+							</div>
+							<div class="card-desc">
+								<p>Telegram bot framework</p>
+							</div>
+							<div class="chips wrap row">
+								<p class="chip">Go</p>
+								<p class="chip">PostgreSQL</p>
+							</div>
 						</a>
 					</div>
 				</section>
-				<section>
+				<section class="width100">
 					<h1 class="portfolio-section-header"><i class='bx bxs-lock-alt'></i> Crypto</h1>
-					<div class="protfolio-section-container row">
-						<a class="protfolio-item" href="https://github.com/karalef/quark">
-							<img src="https://github-readme-stats.vercel.app/api/pin/?username=karalef&repo=quark"
-								alt="reimaginedreadme" />
+					<div class="protfolio-section-container sb row wrap">
+						<a class="card port-card" href="https://github.com/karalef/quark">
+							<div class="card-title">
+								<h4>quark</h4>
+							</div>
+							<div class="card-desc">
+								<p>A crypto-secure digital identity manager</p>
+							</div>
+							<div class="chips wrap row">
+								<p class="chip">Go</p>
+							</div>
 						</a>
-						<a class="protfolio-item" href="https://github.com/karalef/circl">
-							<img src="https://github-readme-stats.vercel.app/api/pin/?username=karalef&repo=circl"
-								alt="reimaginedreadme" />
+						<a class="card port-card" href="https://github.com/karalef/libcrystals">
+							<div class="card-title">
+								<h4>libcrystals</h4>
+							</div>
+							<div class="card-desc">
+								<p>An implementation of the Kyber and Dilithium algorithms</p>
+							</div>
+							<div class="chips wrap row">
+								<p class="chip">Go</p>
+								<p class="chip">C</p>
+							</div>
 						</a>
-						<a class="protfolio-item" href="https://github.com/karalef/libcrystals">
-							<img src="https://github-readme-stats.vercel.app/api/pin/?username=karalef&repo=libcrystals"
-								alt="reimaginedreadme" />
+						<a class="card port-card" href="https://github.com/karalef/circl">
+							<div class="card-title">
+								<h4>circl</h4>
+							</div>
+							<div class="card-desc">
+								<p>Cloudflare`s crypto lib</p>
+							</div>
+							<div class="chips wrap row">
+								<p class="chip">Go</p>
+								<p class="chip">C</p>
+							</div>
 						</a>
 					</div>
 				</section>
-				<section>
+				<section class="width100">
 					<h1 class="portfolio-section-header"><i class='bx bx-code-alt'></i> Other</h1>
-					<div class="protfolio-section-container row">
-						<a class="protfolio-item" href="https://github.com/karalef/gobfck">
-							<img src="https://github-readme-stats.vercel.app/api/pin/?username=karalef&repo=gobfck"
-								alt="reimaginedreadme" />
+					<div class="protfolio-section-container sb row wrap">
+						<a class="card port-card" href="https://github.com/karalef/gobfck">
+							<div class="card-title">
+								<h4>gobfck</h4>
+							</div>
+							<div class="card-desc">
+								<p>Brainfuck virtual machine</p>
+							</div>
+							<div class="chips wrap row">
+								<p class="chip">Go</p>
+							</div>
+						</a>
+						<a class="card port-card" href="https://github.com/karalef/me">
+							<div class="card-title">
+								<h4>me</h4>
+							</div>
+							<div class="card-desc">
+								<p>Source code of this site</p>
+							</div>
+							<div class="chips wrap row">
+								<p class="chip">HTML&CSS</p>
+								<p class="chip">JS</p>
+							</div>
+						</a>
+						<a class="card port-card" href="https://github.com/karalef/social">
+							<div class="card-title">
+								<h4>social</h4>
+							</div>
+							<div class="card-desc">
+								<p>Social network</p>
+							</div>
+							<div class="chips wrap row">
+								<p class="chip">HTML&CSS</p>
+								<p class="chip">JS</p>
+								<p class="chip">Go</p>
+								<p class="chip">Docker</p>
+								<p class="chip">PostgreSQL</p>
+							</div>
 						</a>
 					</div>
 				</section>
 			</div>
-
 		</section>
+		<div class="h50"></div>
 		<section id="contact" class="flex">
 			<div class="flexEmpty"></div>
-			<hr style="border-color: rgba(13, 13, 13, .4); border-width: 2px;">
-			<div class="contact-container pad50 flex wrap se">
-				<div class="rounded-rectangle email">
-					<h3 class="contactHeader"><i class='bx bxs-envelope'></i> Email</h3>
-					<a href="mailto:mgsiask@gmail.com">
-						<p> mgsiask@gmail.com</p>
-					</a>
-					<a href="mailto:example@mail.com">
-						<p> example@mail.com</p>
-					</a>
+			<div class="contacts-container hpad width100">
+				<div class="flex">
+					<h1 style="color: var(--main-color);">&lcub;</h1>
+					<h1>&nbsp;Contacts&nbsp;</h1>
+					<h1 style="color: var(--main-color);">&rcub;</h1>
 				</div>
-				<div class="rounded-rectangle social">
-					<h3 class="contactHeader"><i class='bx bx-share-alt'></i> Social Media</h3>
-					<a href="https://github.com/karalef">
-						<div class="row">
-							<i class='bx bxl-github'></i>
-							<p> @karalef</p>
+				<div class="h50"></div>
+				<div class="groups flex se row wrap">
+					<div class="group">
+						<div class="card-title">
+							<h4><i class='bx bxs-envelope'></i>&nbsp;Email</h4>
 						</div>
-					</a>
-					<a href="https://vk.com/karalef">
-						<div class="row">
-							<i class='bx bxl-vk'></i>
-							<p> @karalef</p>
+						<div class="chips wrap row">
+							<a href="mailto:mgsiask@gmail.com" class="chip">mgsiask@gmail.com</a>
 						</div>
-					</a>
+					</div>
+					<div class="group">
+						<div class="card-title">
+							<h4><i class='bx bx-share-alt'></i>&nbsp;Social Media</h4>
+						</div>
+						<div class="chips wrap row">
+							<a href="https://vk.com/karalef" class="chip"><i class='bx bxl-vk'></i>&nbsp;@karalef</a>
+							<a href="https://github.com/karalef" class="chip"><i class='bx bxl-github'></i>&nbsp;@karalef</a>
+						</div>
+					</div>
+					<div class="group">
+						<div class="card-title">
+							<h4><i class='bx bxs-phone'></i>&nbsp;Phone</h4>
+						</div>
+						<div class="chips wrap row">
+							<a href="tel:+1 234-567-8910" class="chip"><i class='bx bxs-phone'></i>&nbsp;+1 234-567-8910</a>
+						</div>
+					</div>
 				</div>
-				<div class="rounded-rectangle phone">
-					<h3 class="contactHeader"><i class='bx bxs-phone'></i> Phone</h3>
-					<a href="tel:+1 234-567-8910">
-						<p>+1 234-567-8910</p>
-					</a>
-				</div>
+				<div class="h50"></div>
 			</div>
 		</section>
 	</main>
